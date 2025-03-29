@@ -11,7 +11,7 @@ Or perhaps you choose to remain in your seat, you choose to stay as the lights d
 <style>
     body {
         background-color: var(--primary-green);
-        background-image: url(/src/assets/noise.svg);
+        background-image: url(../../assets/noise.svg);
         background-size: 10%;
         background-blend-mode: overlay;
     }
