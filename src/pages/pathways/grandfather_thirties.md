@@ -13,7 +13,7 @@ He plucked the faded rose from the window sill and tossed it into the dust.  The
 
 "Have you always been like this?" I ask him, interrupting his reverie.
 
-"Yes," he says, "[When I was a child...](grandfather_teens)"
+"Yes," he says, "[When I was a child...](/a_symphony_from_dust/pathways/grandfather_teens)"
 
 <style>
     body {

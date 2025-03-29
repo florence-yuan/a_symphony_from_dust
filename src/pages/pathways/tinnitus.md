@@ -13,4 +13,4 @@ The hallucinations began soon after. An old, rusty train roared through the fine
 
 He never went to see a doctor again, not a doctor who specialized in Western medicine, certainly. Oh no; he needed something else entirely, he decided, something that was much, much older than the disease that now plagued him, something that was the culmination of a wisdom more ancient than the flimsy little pills his doctor prescribed him...
 
-And it all started [when he became a composer](grandfather_thirties).
+And it all started [when he became a composer](/a_symphony_from_dust/pathways/grandfather_thirties).

@@ -14,7 +14,7 @@ But the composer himself could no longer breathe. His heart seized, he strained 
 
 And again the silence returned.  And he endured, endured as his own visions were torn apart.  And then he heard the awful whirring in his ears, a whirring and clanging of gongs and cymbals that did not die down for three days and three nights.
 
-Four days later the doctor told him: [Tinnitus](tinnitus).
+Four days later the doctor told him: [Tinnitus](/a_symphony_from_dust/pathways/tinnitus).
 
 <style>
     body {
