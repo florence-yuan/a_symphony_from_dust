@@ -1,0 +1,23 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+const {frontmatter} = Astro.props;
+const shape = frontmatter.shape;
+---
+
+<BaseLayout>
+    <h1 class="segment__title">
+        <span class="title__inner">{frontmatter.title}</span>
+    </h1>
+    <div class="segment__content">
+        <slot />
+    </div>
+    <div class={"shape " + shape} />
+</BaseLayout>
+
+<style>
+    .segment__title {
+        font-size: 5rem;
+        margin-bottom: 1.5rem;
+    }
+</style>

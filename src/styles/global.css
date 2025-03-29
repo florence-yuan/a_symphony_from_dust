@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    cursor: url('../assets/transparent_circle.svg') 24 24, default;
+
+}
+
+:root {
+    box-sizing: border-box;
+    --light-beige1: #fdfbf6;
+    --light-beige2: #dfd9ce;
+
+    --dark-gray: #313131;
+    --dark-gray2: #353535;
+    --primary-yellow: #ea9f37;
+    --primary-green: #396d6f;
+    --primary-red: #a75445;
+
+    --light-red: #e4c5c0;
+    --text-color: #252525;
+}
+
+::selection {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+body {
+
+}
+
+main {
+    width: 90%;
+    max-width: 60rem;
+    margin: 3rem auto;
+    font-family: "Newsreader", serif;
+    color: #252525;
+    position: relative;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+h1, h2, h3 {
+    font-family: "Bona Nova", serif;
+}
+
+h1 {
+    font-weight: 500;
+}
+
+p {
+    line-height: 1.6;
+}
+
+p + p {
+    margin-top: 0.6em;
+}
+
+a {
+    color: currentColor;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    color: var(--light-red);
+}
+
+p:first-child::first-letter {
+    float: left;
+    font-size: 2rem;
+    font-family: "Boldonse", system-ui;
+    margin: 0.1rem 0.5rem 0.3rem;
+    line-height: 1;
+}
+
+.segment__title {
+    overflow: hidden;
+    line-height: 1.1;
+}
+
+@keyframes textFloatUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.title__inner {
+    display: inline-block;
+    animation-name: textFloatUp;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+/* Cursor */
+
+.cursor {
+    width: 50px;
+    height: 50px;
+    /* background-color: currentColor; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    pointer-events: none;
+    border: 1px solid currentColor;
+    transform-origin: center;
+    transform: translateX(-50%) translateY(-50%);
+    transition: transform 0.2s ease-in-out,
+    backdrop-filter 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+}
+
+.cursor::before {
+    content: "";
+    position: relative;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: currentColor;
+    border-radius: inherit;
+    transition: all 0.25s ease-in-out;
+}
+
+.cursor.hover {
+    border-color: transparent;
+}
+
+.cursor.hover::before {
+    backdrop-filter: invert(1);
+    background-color: transparent;
+    transform: scale(5);
+}
+
+/* .cursor {
+    width: 1rem;
+    height: 1rem;
+    background-color: currentColor;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50%;
+    pointer-events: none;
+    transform-origin: center;
+    transform: translateX(0%) translateY(-35%);
+    transition: transform 0.2s ease-in-out;
+}
+
+.cursor.hover {
+    background-color: transparent;
+    border: 0.5px solid currentColor;
+    transform: scale(2) translateX(0%) translateY(-35%);
+} */
+
+/* Shapes */
+
+@keyframes floatUp {
+    from {
+        transform: scale(0.95) translateY(10%);
+        opacity: 0;
+    }
+    to {
+        transform: none;
+    }
+}
+
+.shape {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    translate: -50% 0%;
+    z-index: -1;
+}
+
+.circle {
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    border: 1px solid white;
+    text-align: center;
+    animation-name: floatUp;
+    animation-duration: 1s;
+}
+
+@keyframes bgNoise {
+    0% {
+        background-position: -10% -10%;
+    }
+    50% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -10% -10%;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.box {
+    top: 50%;
+    translate: -50% -50%;
+    width: 30rem;
+    height: 30rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+    background-image: url(../assets/noise.svg);
+    background-size: 10%;
+    animation-name: bgNoise;
+    animation-timing-function: steps(2, end);
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    backdrop-filter: contrast(10) brightness(100);
+/*     animation-name: bgNoise, fadeOut;
+    animation-timing-function: steps(2, end), linear;
+    animation-duration: 0.5s, 5s;
+    animation-iteration-count: infinite, 1;
+    animation-fill-mode: none, forwards; */
+    transition: transform 0.1s linear;
+    z-index: 10;
+}

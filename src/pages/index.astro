@@ -1,11 +1,45 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout>
+	<h1 class="story__title">A Symphony from Dust</h1>
+	<p class="story__author">Florence Yuan</p>
+	<div class="story__content">
+		<a href="/pathways/music_begins">Dust collects to become music</a><br>
+		<a href="/pathways/music_begins">Does music return to dust?</a>
+		<img class="story__poster"
+			src="/src/assets/images/pexels-mavimiro-17681922.jpg"
+		/>
+	</div>
+</BaseLayout>
+
+<style>
+	.story__title {
+		margin-bottom: 1rem;
+		font-size: 5rem;
+		text-align: center;
+	}
+
+	.story__author {
+		font-size: 1.5rem;
+		font-style: italic;
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+	
+	.story__content {
+		position: relative;
+		margin: 0 auto;
+		line-height: 1.6;
+	}
+
+	.story__poster {
+		display: block;
+		max-width: 100%;
+	}
+
+	.story__poster::before {
+
+	}
+</style>
