@@ -1,47 +1,65 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import poster from './../assets/images/pexels-mavimiro-17681922.jpg'
 ---
 
 <BaseLayout>
 	<h1 class="story__title">A Symphony from Dust</h1>
 	<p class="story__author">Florence Yuan</p>
 	<div class="story__content">
-		<a href="/a_symphony_from_dust/pathways/music_begins">Dust collects to become music</a><br>
-		<a href="/a_symphony_from_dust/pathways/music_begins">Does music return to dust?</a>
-		<img class="story__poster"
-			src={poster.src}
-			alt="Poster"
-		/>
+		<pre class="story__preface">
+Once I tried to make music from
+all the sounds I could hear in the world
+the rustle of brittle leaves in winter rain
+the swish of a parasol on a sunny day
+twirling into a mist of air and laughter
+
+Then I understood music comes from 
+the absence of words, from a residue
+of pain, a dislike of cacophony, an
+absence of air and laughter, the dust
+that collects under drawers and sits
+in silence of days long past
+
+Time, but when I think of it it has
+already passed from my sight and hearing
+I try to recollect it now, not succeeding --
+Is there only silence in which to begin?</pre>
+		<a href="/a_symphony_from_dust/pathways/music_begins" class="story__btn">Next: Music</a>
 	</div>
 </BaseLayout>
 
 <style>
+	main {
+		border: 1px solid gainsboro;
+	}
+
 	.story__title {
-		margin-bottom: 1rem;
+		margin-bottom: 0.5rem;
 		font-size: 5rem;
 		text-align: center;
 	}
 
 	.story__author {
-		font-size: 1.5rem;
+		font-size: 2rem;
 		font-style: italic;
-		margin-bottom: 1.5rem;
 		text-align: center;
 	}
 	
 	.story__content {
 		position: relative;
-		margin: 0 auto;
-		line-height: 1.6;
+		top: 1rem;
+		margin: 0rem auto;
+		text-align: center;
+	}
+	
+	.story__preface {
+		font-family: "Newsreader", serif;
+		text-align: center;
+		line-height: 1.5;
 	}
 
-	.story__poster {
-		display: block;
-		max-width: 100%;
-	}
-
-	.story__poster::before {
-
+	.story__btn {
+		top: 2rem;
+		font-size: 2rem;
 	}
 </style>

@@ -9,15 +9,16 @@ What did the others understand about glory?  They trotted like a mismatched herd
 
 That damned whistle!  It cut into his music like a clap of thunder, but without a shred of awe or glory.  It was more like an overlarge fly that hovered with pendulous feet, slicing sharp diagonals now and then through the sinuous shapes of music.
 
-He plucked the faded rose from the window sill and tossed it into the dust.  The little man blew his whistle again, and some straggler sped up, wheezing.  His bow had fallen sideways onto the chair.  He picked it up and dragged it across the strings, listening, hoping as the flow renewed itself.  The ethereal goddess returned from the dust, having accepted his offering.  He smiled wanly, his mind beginning to run in abstract circles.
+He plucked the faded rose from the window sill and tossed it into the dust.  The little man blew his whistle again, and some straggler sped up, wheezing.  His bow had fallen sideways onto the chair.  He picked it up and dragged it across the strings, listening, hoping as the flow renewed itself.  The ethereal goddess returned from the dust, having accepted his offering.  He smiled wanly, his mind beginning to run in abstract circles, a new obsession building in the absence of sound.
 
 "Have you always been like this?" I ask him, interrupting his reverie.
 
-"Yes," he says, "[When I was a child...](/a_symphony_from_dust/pathways/grandfather_teens)"
+"Oh," he says, "[when I was a child...](/a_symphony_from_dust/pathways/grandfather_teens)"
 
 <style>
     body {
         background-color: var(--primary-red);
+        --hover-color: var(--primary-green);
     }
 
     .main {

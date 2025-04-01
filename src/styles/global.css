@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    cursor: url('../assets/transparent_circle.svg') 24 24, default;
+    /* cursor: url('../assets/transparent_circle.svg') 24 24, default; */
 
 }
 
@@ -33,7 +33,8 @@
 main {
     width: 90%;
     max-width: 60rem;
-    margin: 3rem auto;
+    padding: 3rem 0;
+    margin: 0 auto;
     font-family: "Newsreader", serif;
     color: #252525;
     position: relative;
@@ -51,6 +52,7 @@ h1 {
 }
 
 p {
+    font-size: 1.2rem;
     line-height: 1.6;
 }
 
@@ -59,19 +61,54 @@ p + p {
 }
 
 a {
+    position: relative;
     color: currentColor;
+    text-decoration: none;
     transition: all 0.2s ease-in-out;
 }
 
-a:hover {
-    color: var(--light-red);
+a::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid currentColor;
+}
+
+@keyframes linkSlide {
+    0% {
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    50% {
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+    51% {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    100% {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
+
+a:hover::before {
+    animation-name: linkSlide;
+    animation-duration: 0.6s;   
+    /* color: var(--hover-color) */
+    /* filter: opacity(0.8) brightness(1.2) contrast(1.2); */
 }
 
 p:first-child::first-letter {
     float: left;
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: "Boldonse", system-ui;
-    margin: 0.1rem 0.5rem 0.3rem;
+    margin: 0.1rem 0.5rem;
     line-height: 1;
 }
 
@@ -141,27 +178,6 @@ p:first-child::first-letter {
     transform: scale(5);
 }
 
-/* .cursor {
-    width: 1rem;
-    height: 1rem;
-    background-color: currentColor;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: block;
-    border-radius: 50%;
-    pointer-events: none;
-    transform-origin: center;
-    transform: translateX(0%) translateY(-35%);
-    transition: transform 0.2s ease-in-out;
-}
-
-.cursor.hover {
-    background-color: transparent;
-    border: 0.5px solid currentColor;
-    transform: scale(2) translateX(0%) translateY(-35%);
-} */
-
 /* Shapes */
 
 @keyframes floatUp {
@@ -181,17 +197,19 @@ p:first-child::first-letter {
     max-width: 100%;
     max-height: 100%;
     translate: -50% 0%;
+    pointer-events: none;
     z-index: -1;
 }
 
 .circle {
-    width: 40rem;
-    height: 40rem;
+    width: 60rem;
+    aspect-ratio: 1;
     border-radius: 50%;
-    border: 1px solid white;
+    border: 5px solid rgba(255, 255, 255, 0.6);
     text-align: center;
     animation-name: floatUp;
     animation-duration: 1s;
+    filter: blur(10px);
 }
 
 @keyframes bgNoise {
@@ -215,8 +233,10 @@ p:first-child::first-letter {
 .box {
     top: 50%;
     translate: -50% -50%;
-    width: 30rem;
-    height: 30rem;
+    width: 45rem;
+    /* height: 30rem; */
+    max-width: 100%;
+    aspect-ratio: 1;
     border: 1px solid rgba(255, 255, 255, 0.5);
     background-color: transparent;
     background-image: url(../assets/noise.svg);
@@ -226,7 +246,7 @@ p:first-child::first-letter {
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
     animation-fill-mode: none;
-    backdrop-filter: contrast(10) brightness(100);
+    backdrop-filter: contrast(2) brightness(10);
 /*     animation-name: bgNoise, fadeOut;
     animation-timing-function: steps(2, end), linear;
     animation-duration: 0.5s, 5s;
